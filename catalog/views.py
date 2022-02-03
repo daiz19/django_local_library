@@ -45,7 +45,6 @@ class AuthorListView(LoginRequiredMixin, generic.ListView):
 
 class AuthorDetailView(generic.DetailView):
   model = Author
-  num_instances = BookInstance.objects.all().count()
 
 class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
   model = BookInstance
